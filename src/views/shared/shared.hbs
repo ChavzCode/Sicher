@@ -1,0 +1,41 @@
+<section class="container min-link">
+
+    <h2 class="shared-title">Shared with me</h2>
+    <div class="link-list">
+        {{#each rows}}
+            <div class="link-info shared-links link-{{id}}">
+                <div>
+                    <a href="{{ulr}}" target="_blank">
+                        <h3 class="text-center">{{title}}</h3>
+                    </a>
+                    <p class="link-description">{{description}}</p>
+                    <p class="text-center shared-by">By <span>{{sharedBy}}</span></p>
+                </div>
+                <div>
+                    <p class="creation-date">{{timeago creationDate}}</p>
+                    <div class="btn-container">
+                        <a href="shared/delete/{{id}}" class="btn btn-list btn-delete">Delete</a>
+                    </div>
+                </div>
+            </div>
+        {{else}}
+            <div class="container havent">
+                <div class="hero-container">
+                    <h1>You haven't import a shared link</h1>
+                    <div class="get-started-btn sicher-link">
+                        <a href="/api">Share links using API'S</a>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+
+</section>
+
+<section class="container">
+    <div class="advanced-features">
+        <div class="feature feature-api">
+            <a href="/links"><i class="fas fa-long-arrow-alt-left"></i> My links</a>
+        </div>
+    </div>
+</section>

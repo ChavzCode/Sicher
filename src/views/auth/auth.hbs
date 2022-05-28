@@ -1,0 +1,44 @@
+<div class="sign-container">
+    <div class="forms">
+        <div class="background">
+            <div class="box signin">
+                <h2>Already have an account?</h2>
+                <button class="signinBtn">Sign in</button>
+            </div>
+            <div class="box signup">
+                <h2>Don't have an account?</h2>
+                <button class="signupBtn">Sign Up</button>
+            </div>
+        </div>
+
+        <div class="formBox">
+            {{!-- Sign In --}}
+            <div class="form-auth signin-form">
+                <form action="signin" method="POST">
+                    <h3>Sign In</h3>
+                    <input type="text" name="username" placeholder="Username" autofocus>
+                    <input type="password" name="password" placeholder="Password">
+                    <div class="btn-container">
+                        <button class="btn btn-success">Login</button>
+                    </div>
+                    <a href="/forgot">Forgot Password?</a>
+                </form>
+            </div>
+
+            {{!-- Sing Up --}}
+            <div class="form-auth singup-form">
+                <form action="signup" method="POST">
+                    <h3>Sign Up</h3>
+
+                    <input type="text" name="username" placeholder="Username">
+                    <input type="password" name="password" placeholder="Password">
+                    <input type="text" name="fullname" placeholder="Full Name">
+                    
+                    <div class="btn-container">
+                        <button class="btn btn-signin">Sign Up</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

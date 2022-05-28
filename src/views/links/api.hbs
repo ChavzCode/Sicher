@@ -1,0 +1,69 @@
+<div class="container">
+    <div class="api-container">
+        <div class="generate-api chart">
+            <div class="form-api">
+                <h3>Create an Api</h3>
+
+                <form method="POST" action="/api/add" >
+                    <div class="api-form-inputs">
+                        <label for="availability">API availability:</label>
+                        <input type="date" name="availability">
+                    </div>
+                    
+                    <div class="btn-container">
+                        <button class="btn btn-signin">Create API</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="form-api">
+                <h3>Download Sicher Api</h3>
+
+                <form method="POST" action="/api/download">
+                    <div class="api-form-inputs">
+                        <label for="">SICHER API:</label>
+                        <input type="text" id="token" name="token" placeholder="API Link">
+                    </div>
+                
+                    <div class="btn-container">
+                        <button id="downloadApi" class="btn btn-success">Download API</button>
+                    </div>
+                </form>
+            </div>
+        </div>    
+        
+        <div class="user-resume chart">
+            <div class="user">
+                <h3> <span>Hi,</span> {{user.username}}</h3>
+
+                <div class="my-token">
+                    {{#if api}}
+                    <p>This is the Application Programming Interface you have generated. Make sure you check the <span>Policy of implementation</span> before you or your team use the API.</p>
+                    
+                    <div class="section">
+                        <div class="token-box">
+                            <div class="token-container">
+                                <input id="api-token" value="http://192.168.1.57:3000/api/links/{{api.userToken}}"></input>
+                            </div>   
+                            <div class="copy-token">
+                                <i id="copy"  class="far fa-copy"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="api-info">
+                        <p>Updated <span>{{timeago api.updatedTime}}</span></p>
+                        <p>Availability Until: <span>{{formatDate api.availabilityUntil}}</span></p>
+                        <p>Your API's token is <span>{{api.userToken}}</span></p>
+                    </div>
+                    
+
+                    {{else}}
+                        <div class="none-api">
+                            <p>Oooh! Seems you haven't generate <span>any API</span> as of now</p>
+                        </div>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

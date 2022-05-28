@@ -1,0 +1,21 @@
+<div class="container form">
+    <div class="form-container edit-background">
+        <form action="/links/update/{{linkRequired.id}}" method="POST">
+            <h3 class="link-heading">{{linkRequired.title}}</h3>
+            <div class="field">
+                <input type="text" name="title" id="title" value="{{linkRequired.title}}">
+            </div>
+            <div class="field">
+                <label for="url">URL</label>
+                <input type="url" name="url" value="{{linkRequired.url}}">
+            </div>
+            <div class="field">
+                <label for="description">Description</label>
+                <textarea name="description">{{linkRequired.description}}</textarea>
+            </div>
+            <div class="btn-container">
+                <button class="btn btn-success">Edit</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,616 @@
+/* Global Configuration*/
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    font-size: 1.6rem;
+    background-color: #F39237;
+}
+body.active{
+    background-color: #30EBC2;
+}
+img{
+    max-width: 100%;
+}
+p{
+    font-family: 'Lato', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+h1{
+    font-size: 3.8rem;
+}
+h2{
+    font-size: 3.4rem;
+}
+h3{
+    font-size: 2.8rem;
+    margin: 2rem 0;
+}
+
+/*Utilities*/
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;       
+}
+@media (min-width: 768px){
+    .container{
+        width: 90%;
+    }
+}  
+@media (min-width: 968px){
+    .container{
+        width: 95%;
+    }
+}
+.text-center {
+    text-align: center;
+}
+.section{
+    padding: 4rem 0;
+}
+/*Buttons*/
+.btn{
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    border: 0;
+    border-radius: 1rem;
+    flex: 1 0;
+    color: #ffffff;
+}
+.btn-success{
+    background-color: #F39237;   
+}
+.btn-signin{
+    background-color: #30EBC2;
+}
+.btn:hover{
+    cursor: pointer;
+}
+/*Nav*/
+.bar{
+    background-color: #151515;
+    box-shadow: 0 0.3rem 0.2rem black;
+}
+.nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0;
+    flex: 0 0 100%;
+}
+.nav a, .nav h1{
+    margin: 0 4rem;
+    color: white;
+}
+.nav-container{
+    display: flex;
+    align-items: center;
+}
+.logout-container{
+    flex: 0 0 10%;
+}
+.logout-container a{
+    color: white;
+}
+.logout-container i{
+    color: #30EBC2;
+}
+
+/*Alert*/
+.alert-container{
+    display: grid;
+    place-items: center;
+}
+.alert{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0 1rem 0;
+    padding: 1rem 6rem;
+}
+.success{
+    background-color: #A8EB12;
+}
+.message{
+    background-color: #EB1212;
+}
+.alert p{
+    margin-right: 2rem;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+.close:hover{
+    cursor: pointer;
+}
+
+/*Hero*/
+.hero-container{
+    display: grid;
+    place-items: center;
+    min-height: 400px;
+}
+.hero-container h1{
+    font-weight: 900;
+    font-style: italic;
+    font-size: 5rem;
+    color: white;
+}
+.get-started-btn{
+    display: flex;
+    justify-content: center;
+}
+.get-started-btn a{
+    font-size: 2rem;
+    color: white;
+    padding: 2rem;
+    font-weight: 600;
+    font-family: 'Lato', sans-serif;
+    border-radius: 3rem;
+    background-color: #151515;
+}
+
+/*Link Add*/
+.form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 6rem;
+}
+.form-container{
+    color: white;
+    background-color: #151515;
+    padding: 4rem 6rem; 
+    border: 1px solid #ffffff;
+    border-radius: 2rem;
+}
+.form-container form h3{
+    margin: 1rem 0;
+}
+.field{
+    margin: 2rem 0rem;
+    display: flex;
+    flex-direction: column;
+}
+.field label{
+    margin: 0 0 1rem 0;
+    font-weight: 600;
+}
+.field input{
+    border-radius: 1rem;
+    padding: 1rem 0;
+}
+.btn-container{
+    display: flex;
+}
+
+/*List Links*/
+.min-link{
+    min-height: 64vh;
+}
+.link-list{
+    margin: 3rem 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4rem;
+}
+.link-info{
+    display: grid;
+    grid-template-rows: 60% 40%;
+    background-color: black;
+    color: white;
+    padding: 2rem;
+    border-radius: 2rem;
+    box-shadow: .1rem 0.3rem 0.2rem #151515;
+}
+.link-description{
+    text-align: center;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid #e1e1e1;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+.link-info h3, .link-info a{
+    transition: all .3s ease-in-out;
+}
+.link-info h3:hover, .link-info a:hover{
+    color: #F39237;
+}
+.link-info a, .shared-title{
+    color: white;
+}
+.btn-container{
+    justify-content: center;
+}
+.btn-container a{
+    color: white;
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+.btn-container .btn-list{
+    margin: 0rem 1rem;
+    text-align: center;;
+    flex-basis: calc(50% - 2rem);
+    box-shadow: 0rem 0.3rem .6rem #151515;
+    background-color: #151515;
+}
+.creation-date{
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.7rem;
+    padding: 0rem 0;    
+    color: #F39237;
+}
+.shared-links .creation-date, .shared-links span, .shared-links h3:hover{
+    color: #30EBC2;
+}
+.shared-links .creation-date{
+    color: #ffffff;
+}
+.sicher-link a{
+    border-radius: 0;
+}
+.edit-background{
+    background-color:#061121;
+}
+.advanced-features{
+    margin: 4rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+.feature{
+    padding: 2rem 4rem;
+    border-radius: 2rem;
+    margin-right: 2rem;
+    box-shadow: 0 .5rem .5rem rgba(0, 0, 0, 0.4);
+}
+.feature a{
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    font-weight: 700;
+    font-style: italic;
+}
+.feature a:hover{
+    cursor: pointer;
+}
+.feature-api{
+    background-color: #333;
+}
+.shared-links{
+    background-color: #061121;
+}
+.feature-done{
+    background-color: #A8EB12;
+    color: #151515;
+}
+.feature-cancel{
+    background-color: #EB1212;
+}
+/*Sing Up*/
+.sign-container{
+    display: grid;
+    place-items: center;
+    min-height: 80vh;
+    background-color: transparent;
+    transition: 0.5s;
+}
+.active{
+    transition: 0.5s;
+}
+.forms{
+    position: relative;
+    width: 80rem;
+    height: 50rem;
+    margin: 2rem;
+}
+.background{
+    position: absolute;
+    top: 4rem;
+    width: 100%;
+    height: 42rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0.5rem 4.5rem rgba(0, 0, 0, 0.15);
+}
+.background .box{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.box h2{
+    color: white;
+    font-size: 2.4rem;
+    font-weight: 500;
+    margin-bottom: 1.2rem;
+}
+.box button{
+    cursor: pointer;
+    padding: 1rem 2rem;
+    background-color: #ffffff;
+    color: #333;
+    font-size: 1.6rem;
+    font-weight: 500;
+    border: none;
+}
+.formBox{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #ffffff;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 .5rem 4.5rem rgba(0, 0, 0, 0.25);
+    transition: 0.5s ease-in-out;
+}
+.formBox.active{
+    left: 50%;
+}
+.formBox .form-auth{
+    padding: 5rem;
+    transition: 0.5s;
+}
+.form-auth form{
+    display: flex;
+    flex-direction: column;
+}
+.form-auth h3{
+    color: #333;
+}
+.form-auth input{
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.form-auth a{
+    margin-top: 2rem;
+    text-align: center;
+    color: #333;
+}
+.singup-form{
+    display: none;
+}
+.cart{
+    height: 40rem;
+}
+
+/*Api View*/
+.api-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 4rem;
+    margin: 4rem 0;
+}
+.generate-api{
+    background-color: white;
+}
+.generate-api h3{
+    font-weight: 400;
+}
+.form-api{
+    border: .6rem solid rgba(51, 51, 51, 0.3);
+    border-radius: 3rem;
+    padding: 3rem;
+    margin: 2rem 0;
+}
+.chart{
+    min-height: 40rem;
+    padding: 4rem;
+    border-radius: 2rem;
+}
+.api-form-inputs{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.api-form-inputs label{
+    flex: 1 0 calc(30% - 2rem); 
+    font-size: 1.8rem;
+    font-weight: 800;  
+}
+.api-form-inputs input{
+    flex: 0 0 calc(65% - 2rem);
+    padding: .5rem 0;
+    font-weight: 500;
+}
+.form-api .btn-container{
+    margin: 2rem 0 0 0;
+}
+
+.user-resume{
+    color: white;
+    background-color: #151515;
+    padding: 5rem;
+}
+.user h3{
+    text-align: center;
+}
+.user span{
+    font-weight: 900;
+    color: #30EBC2;
+}
+.token-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #30EBC2;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 1rem;
+    color: white;
+}
+.black-api-box{
+    background-color: #151515;
+}
+.black-api-box p{
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-size: 1.7rem;
+}
+.token-container{
+    flex: 1 0 calc(90% - 2rem);
+}
+.token-container input{
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    border: 0;
+    text-align: center;
+}
+.copy-token{
+   flex: 1 1 calc(10% - 2rem);
+   border-left: 1px solid #e1e1e1;
+   color: #061121;
+   cursor: pointer;
+}
+.api-info{
+    display: grid;
+    column-gap: 4rem;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+}
+.api-info p{
+    padding-bottom: 1rem;
+    font-size: 1.7rem;
+    font-weight: 400;
+    border-bottom: 1px solid #e1e1e1;
+}
+.api-info p:last-of-type {
+    grid-column: 1/3;
+    font-family: 'Monserrat', sans-serif;
+    font-weight: 700;
+}
+
+/* Shared & Import*/
+.ctn-selection{
+    display: flex;
+    justify-content: space-between;
+}
+.ctn-selection i{
+    font-size: 2rem;
+    padding: 1rem;
+    margin: 0 1rem 1rem 0;
+    border-radius: 50%;
+}
+.ctn-selection .select-link-btn{
+    background-color: #30EBC2;
+}
+.ctn-selection .unselect-link-btn{
+    background-color: #EB1212;
+    color: white;
+}
+.ctn-selection .legend{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 2rem;
+}
+.unselected h3{
+    color: white;
+}
+.legend p{
+    color: white;
+}
+.legend div{
+    margin: 0 1rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 1px solid #e1e1e1;
+}
+.legend div.selected-legend{
+    background-color: #ffffff;
+}
+
+.legend div.unselected-legend{
+    background-color: #061121;
+}
+
+.shared-links .btn-container a{
+    background-color: #30EBC2;
+}
+.shared-links .btn-container a:hover{
+    color: #061121;
+}
+
+
+/*Form Animations*/
+.slide-left{
+    animation-duration: .7s;
+    animation-name: slideLeft;
+    animation-fill-mode: forwards;
+}
+.open-left{
+    animation-duration: .7s;
+    animation-name: openSlideLeft;
+    animation-fill-mode: forwards;
+}
+.slide-right{
+    animation-duration: .7s;
+    animation-name: slideRight;
+    animation-fill-mode: forwards;
+}
+.open-right{
+    animation-duration: .7s;
+    animation-name: openSlideRight;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideLeft{
+    0%{ 
+        transform: translateX(1rem);
+        opacity: 100%;
+    }
+    100%{
+        transform: translateX(-100rem);
+        opacity: 0%;
+    }
+}
+
+@keyframes openSlideLeft{
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+@keyframes slideRight {
+    0%{ 
+        transform: translateX(-50rem);
+        opacity: 0%;
+    }
+    100%{
+        transform: translateX(0rem);
+        opacity: 100%;
+    }
+}
+@keyframes openSlideRight{
+    0%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 0%;
+    }
+}
