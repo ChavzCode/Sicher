@@ -25,7 +25,7 @@ CREATE TABLE links(
 );
 
 --User Tokens
-CREATE TABLE API(
+CREATE TABLE api(
     id INT(11) NOT NULL AUTO_INCREMENT,
     userToken VARCHAR(60) NOT NULL,
     updatedTime DATETIME NOT NULL DEFAULT current_timestamp,

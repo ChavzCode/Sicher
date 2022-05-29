@@ -66,22 +66,27 @@ router.get('/links/:token', async (req, res) => {
 
 //Create an API through tokens
 router.post('/add', async (req, res) => {
-    const { id } = req.user;
-    const { availability } = req.body;
-    const newToken = generateToken();
-    anyRow = await connection.query(`SELECT * FROM API WHERE userApi = ${id}`);
-       
-    if(anyRow.length > 0){  //Update API
-        const rowId = anyRow[0].id;
-        const todayDate = getTodayDate();
-        await connection.query(`UPDATE api SET userToken = "${newToken}" , updatedTime = "${todayDate}" , availabilityUntil = "${availability}" WHERE id = ${rowId};`);
-        req.flash('success', 'API updated successfully');
-        res.redirect('/api');
-    }else{ //Create API
-        await connection.query(`INSERT INTO api (userToken, availabilityUntil, userApi) VALUES ("${newToken}", ${availability}, ${id});`);
-        req.flash('success', 'API created successfully');
-        res.redirect('/api');
+    try{
+        const { id } = req.user;
+        const { availability } = req.body;
+        const newToken = generateToken();
+        anyRow = await connection.query(`SELECT * FROM api WHERE userApi = ${id}`);
+        
+        if(anyRow.length > 0){  //Update API
+            const rowId = anyRow[0].id;
+            const todayDate = getTodayDate();
+            await connection.query(`UPDATE api SET userToken = "${newToken}" , updatedTime = "${todayDate}" , availabilityUntil = "${availability}" WHERE id = ${rowId};`);
+            req.flash('success', 'API updated successfully');
+            res.redirect('/api');   
+        }else{ //Create API
+            await connection.query(`INSERT INTO api (userToken, availabilityUntil, userApi) VALUES ("${newToken}",  "${availability}", ${id});`);
+            req.flash('success', 'API created successfully');
+            res.redirect('/api');
+        }
+    }catch (e){
+        console.log(e)
     }
+    
 })
 
 //Consume the API through tokens - Downloading & Sharing Content
